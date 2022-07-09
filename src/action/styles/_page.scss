@@ -1,0 +1,10 @@
+@import "./variables";
+
+body {
+    background-color: $light-gray;
+    color: $dark-gray;
+    font: {
+        family: $font-family;
+        size: 16px;
+    }
+}
