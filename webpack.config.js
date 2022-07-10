@@ -7,6 +7,7 @@ module.exports = {
 	  "content_scripts": ["./src/content_scripts/index.js"],
 	  "options": ["./src/options/scripts/index.js", "./src/options/styles/options.scss"],
 	  "action": ["./src/action/scripts/index.js", "./src/action/styles/action.scss"],
+	  "newtab": ["./src/newtab/scripts/index.js", "./src/newtab/styles/newtab.scss"],
 	},
 	output: {
 		path: path.resolve(__dirname, "dist"),
@@ -57,6 +58,7 @@ module.exports = {
 			{ from: "./src/manifest.json" },
 			{ from: "./src/options/options.html" },
 			{ from: "./src/action/action.html" },
+			{ from: "./src/newtab/newtab.html" },
 			{ from: "icons/*", to: path.resolve(__dirname, "dist"), context: "src/" }
 		]
 		}),
