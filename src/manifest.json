@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "Chrome Extension Template",
-    "description": "Template",
+    "description": "A Chrome Extension created using a template",
     "version": "0.0.1",
     "author": "Clyde D'Souza",
     "icons": {
