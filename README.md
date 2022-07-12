@@ -5,7 +5,7 @@ A Chrome Extension created using a template.
 
 ## What does this include? 
 ### Override Chrome's new tab
-This extension will automatically override the new tab page. 
+This extension will automatically override the new tab page. A single extension is limited to overriding only one of the three possible pages.
 
 ```json
 "chrome_url_overrides" : {
@@ -24,8 +24,8 @@ This extension supports the use of an options page.
 
 Just delete the above block from the `manifest.json` file to remove the entry point of this functionality. If you want to remove all references to this code, you'll also have to delete files from folder and references from webpack.
 
-### Action popup
-This extension supports the use of an actions popup window. It also registers a keyboard shortcut to open this action popup. 
+### Action and popup
+An action is an icon that shows up in the toolbar. This extension will also show an action icon in the toolbar. This extension also supports the use of a popup window, which is a special window after the user clicks the action icon. It also registers a keyboard shortcut to open this action popup. 
 
 ```json
 "action": {

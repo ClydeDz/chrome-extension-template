@@ -27,7 +27,7 @@
       "js": ["content_scripts.js"]
     }],
     "action": {
-      "default_popup": "action.html",
+      "default_popup": "popup.html",
       "default_title": "Open template popup"
     },
     "commands": {

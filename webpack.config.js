@@ -6,7 +6,7 @@ module.exports = {
 	  "background": ["./src/background/index.js"],
 	  "content_scripts": ["./src/content_scripts/index.js"],
 	  "options": ["./src/options/scripts/index.js", "./src/options/styles/options.scss"],
-	  "action": ["./src/action/scripts/index.js", "./src/action/styles/action.scss"],
+	  "popup": ["./src/popup/scripts/index.js", "./src/popup/styles/popup.scss"],
 	  "newtab": ["./src/newtab/scripts/index.js", "./src/newtab/styles/newtab.scss"],
 	},
 	output: {
@@ -57,7 +57,7 @@ module.exports = {
 		patterns: [
 			{ from: "./src/manifest.json" },
 			{ from: "./src/options/options.html" },
-			{ from: "./src/action/action.html" },
+			{ from: "./src/popup/popup.html" },
 			{ from: "./src/newtab/newtab.html" },
 			{ from: "icons/*", to: path.resolve(__dirname, "dist"), context: "src/" }
 		]

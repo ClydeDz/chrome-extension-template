@@ -8,6 +8,6 @@ function loadConfiguration(result) {
 }
 
 window.onload = function() {
-    console.info("Action script loaded");
+    console.info("Popup script loaded");
     getStorage(CHROME_SYNC_STORAGE_KEY, loadConfiguration);
 };
