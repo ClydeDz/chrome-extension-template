@@ -31,6 +31,18 @@
       "default_title": "Open template popup"
     },
     "commands": {
+      "turn-on": {
+        "suggested_key": {
+          "default": "Alt + Shift + M"
+        },
+        "description": "Adds an ON badge to the action icon."
+      },
+      "turn-off": {
+        "suggested_key": {
+          "default": "Alt + Shift + N"
+        },
+        "description": "Adds an OFF badge to the action icon."
+      },
       "_execute_action": {
         "suggested_key": {
           "default": "Alt + Shift + L"

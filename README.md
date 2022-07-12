@@ -66,6 +66,28 @@ This extension also comes baked in with a background script. This only listens f
 
 Just delete the above block from the `manifest.json` file to remove the entry point of this functionality. If you want to remove all references to this code, you'll also have to delete files from folder and references from webpack.
 
+### Custom keyboard commands
+This extension also comes baked in with two keyboard commands that will set different badges to the action icon. This functionality is only provided for demo purpose only. 
+
+```json
+"commands": {
+    "turn-on": {
+        "suggested_key": {
+            "default": "Alt + Shift + M"
+        },
+        "description": "Adds an ON badge to the action icon."
+    },
+    "turn-off": {
+        "suggested_key": {
+            "default": "Alt + Shift + N"
+        },
+        "description": "Adds an OFF badge to the action icon."
+    }
+}
+```
+
+Just delete the above block from the `manifest.json` file to remove the entry point of this functionality. If you want to remove all references to this code, you'll also have to delete files from folder and references from webpack.
+
 ### Permissions
 This repo uses the `chrome.storage.sync` API to demonstrate a simple get and set of a storage value. To be able to use Chrome storage, we need to add it to the permissions list like the snippet below. 
 
