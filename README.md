@@ -29,7 +29,7 @@ An action is an icon that shows up in the toolbar. This extension will also show
 
 ```json
 "action": {
-    "default_popup": "action.html",
+    "default_popup": "popup.html",
     "default_title": "Open template popup"
 },
 "commands": {
