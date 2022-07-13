@@ -88,6 +88,17 @@ This extension also comes baked in with two keyboard commands that will set diff
 
 Just delete the above block from the `manifest.json` file to remove the entry point of this functionality. If you want to remove all references to this code, you'll also have to delete files from folder and references from webpack.
 
+### Omnibox
+This extension support the omnibox feature which can be triggered by typing in `@@` in the omnibox, i.e., Chrome's address bar. An event is added in the background script which will take the text value and open up 3 tabs to social media sites with the text value as the usernames.
+
+```json
+"omnibox": { 
+    "keyword" : "@@" 
+},  
+```
+
+Just delete the above block from the `manifest.json` file to remove the entry point of this functionality. If you want to remove all references to this code, you'll also have to delete files from folder and references from webpack.
+
 ### Permissions
 This repo uses the `chrome.storage.sync` API to demonstrate a simple get and set of a storage value. To be able to use Chrome storage, we need to add it to the permissions list like the snippet below. 
 

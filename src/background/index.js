@@ -14,3 +14,9 @@ chrome.commands.onCommand.addListener((command) => {
         chrome.action.setBadgeBackgroundColor({ color: 'red' });
     }
 });
+
+chrome.omnibox.onInputEntered.addListener((text) => {
+    chrome.tabs.create({ url: 'https://facebook.com/' + encodeURIComponent(text) });
+    chrome.tabs.create({ url: 'https://twitter.com/' + encodeURIComponent(text) });
+    chrome.tabs.create({ url: 'https://instagram.com/' + encodeURIComponent(text) });
+});
