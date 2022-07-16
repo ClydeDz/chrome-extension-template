@@ -5,6 +5,9 @@ A Chrome Extension created using a template.
 
 ## What does this include? 
 ### Override Chrome's new tab
+
+![](./docs/newtab.gif)
+
 This extension will automatically override the new tab page. A single extension is limited to overriding only one of the three possible pages.
 
 ```json
@@ -16,6 +19,9 @@ This extension will automatically override the new tab page. A single extension 
 Just delete the above block from the `manifest.json` file to remove the entry point of this functionality. If you want to remove all references to this code, you'll also have to delete files from folder and references from webpack.
 
 ### Options page
+
+![](./docs/options.gif)
+
 This extension supports the use of an options page. 
 
 ```json
@@ -25,6 +31,9 @@ This extension supports the use of an options page.
 Just delete the above block from the `manifest.json` file to remove the entry point of this functionality. If you want to remove all references to this code, you'll also have to delete files from folder and references from webpack.
 
 ### Action and popup
+
+![](./docs/popup.gif)
+
 An action is an icon that shows up in the toolbar. This extension will also show an action icon in the toolbar. This extension also supports the use of a popup window, which is a special window after the user clicks the action icon. It also registers a keyboard shortcut to open this action popup. 
 
 ```json
@@ -44,6 +53,9 @@ An action is an icon that shows up in the toolbar. This extension will also show
 Just delete the above block from the `manifest.json` file to remove the entry point of this functionality. If you want to remove all references to this code, you'll also have to delete files from folder and references from webpack.
 
 ### Content script
+
+![](./docs/contentscript.gif)
+
 This extension injects a content scripts into a website that matches the github.com domain. At this stage, it only prints a value to the console, but you can build on top of that pretty easily. 
 
 ```json
@@ -56,6 +68,9 @@ This extension injects a content scripts into a website that matches the github.
 Just delete the above block from the `manifest.json` file to remove the entry point of this functionality. If you want to remove all references to this code, you'll also have to delete files from folder and references from webpack.
 
 ### A background script
+
+![](./docs/background.gif)
+
 This extension also comes baked in with a background script. This only listens for a single event at the moment and redirects the user to my website, but you should be able to build on top of this pretty easily.
 
 ```json
@@ -67,7 +82,10 @@ This extension also comes baked in with a background script. This only listens f
 Just delete the above block from the `manifest.json` file to remove the entry point of this functionality. If you want to remove all references to this code, you'll also have to delete files from folder and references from webpack.
 
 ### Custom keyboard commands
-This extension also comes baked in with two keyboard commands that will set different badges to the action icon. This functionality is only provided for demo purpose only. 
+
+![](./docs/badge.gif)
+
+This extension also comes baked in with two keyboard commands that will set different badges to the action icon. The background script contains the event listeners for this. This functionality is only provided for demo purpose only. 
 
 ```json
 "commands": {
@@ -89,7 +107,10 @@ This extension also comes baked in with two keyboard commands that will set diff
 Just delete the above block from the `manifest.json` file to remove the entry point of this functionality. If you want to remove all references to this code, you'll also have to delete files from folder and references from webpack.
 
 ### Omnibox
-This extension support the omnibox feature which can be triggered by typing in `@@` in the omnibox, i.e., Chrome's address bar. An event is added in the background script which will take the text value and open up 3 tabs to social media sites with the text value as the usernames.
+
+![](./docs/omnibox.gif)
+
+This extension support the omnibox feature which can be triggered by typing in `@@` in the omnibox, i.e., Chrome's address bar. An event is added in the background script which will take the text value and open up 3 tabs to social media sites with the text value as the usernames. The background script contains the event listeners for this. 
 
 ```json
 "omnibox": { 
@@ -100,6 +121,9 @@ This extension support the omnibox feature which can be triggered by typing in `
 Just delete the above block from the `manifest.json` file to remove the entry point of this functionality. If you want to remove all references to this code, you'll also have to delete files from folder and references from webpack.
 
 ### Permissions
+
+![](./docs/storagepermissions.gif)
+
 This repo uses the `chrome.storage.sync` API to demonstrate a simple get and set of a storage value. To be able to use Chrome storage, we need to add it to the permissions list like the snippet below. 
 
 ```json
@@ -127,6 +151,10 @@ client-secret: ${{ secrets.CHROME_CLIENT_SECRET }}
 file-name: './extension.zip'
 app-id: ${{ secrets.CHROME_APP_ID }}
 ```
+
+The values for `CHROME_REFRESH_TOKEN`, `CHROME_CLIENT_ID` and `CHROME_CLIENT_SECRET` can be retrieved by following [this guide](https://github.com/ClydeDz/google-api-keys-docs/blob/main/How%20to%20generate%20Google%20API%20keys.md). 
+
+To obtain the `CHROME_APP_ID`, you'll need to upload a version of your Chrome extension to the Chrome Web Store Developer Dashboard. This will create a draft version of your extension and generate an ID for you. Each extension gets a unique ID. 
 
 ## Design assets
 This repo has boilerplate icons and images which you'd want to replace with something apt to the extension you're building. Duplicate my [Figma Chrome extension template](https://www.figma.com/community/file/1127061326249481158) to get started with your design requirements for your Chrome extension.
